@@ -13,7 +13,7 @@ export const searchMyTransaction = async (
   const query: ITransactionSearch = req.query;
 
   const where: any = {
-    user_id: userId,
+    userId,
   };
   const options: any = {};
 

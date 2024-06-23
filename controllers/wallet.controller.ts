@@ -18,7 +18,7 @@ export const updateWallet = async (
     }
 
     let wallet = await prisma.wallets.findFirst({
-      where: { user_id: req["user"].id },
+      where: { userId: req["user"].id },
     });
     if (!wallet) {
       throw new Error("Wallet not found.");
@@ -36,7 +36,7 @@ export const updateWallet = async (
       body.transactionType === transaction_type.deposit
         ? new Decimal(balance + body.amount)
         : new Decimal(balance - body.amount);
-    wallet.updated_at = new Date();
+    wallet.updatedAt = new Date();
 
     wallet = await prisma.wallets.update({
       where: { id: wallet.id },
@@ -44,7 +44,7 @@ export const updateWallet = async (
     });
     await prisma.transactions.create({
       data: {
-        user_id: req["user"].id,
+        userId: req["user"].id,
         amount: body.amount,
         type: body.transactionType,
       },
@@ -56,10 +56,14 @@ export const updateWallet = async (
   }
 };
 
-export const getMyWallet = async (req: any, res: Response, next: NextFunction) => {
+export const getMyWallet = async (
+  req: any,
+  res: Response,
+  next: NextFunction
+) => {
   const user = req["user"];
   const wallet = await prisma.wallets.findFirst({
-    where: { user_id: user.id },
+    where: { userId: user.id },
   });
 
   res.json(createResponse<wallets | null>(wallet));

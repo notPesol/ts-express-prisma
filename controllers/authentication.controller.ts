@@ -26,7 +26,7 @@ export const register = async (
     user = await prisma.users.create({
       data: {
         username: body.username,
-        password_hash: body.password,
+        passwordHash: body.password,
         wallet: { create: { balance: 0 } },
       },
       include: {
@@ -63,7 +63,7 @@ export const login = async (
 
     const isValidPassword = await bcrypt.compare(
       body.password,
-      user.password_hash
+      user.passwordHash
     );
 
     if (!isValidPassword) {
