@@ -14,8 +14,6 @@
 ## Getting Started
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -41,15 +39,16 @@ This is an example of how to list things you need to use the software and how to
    npx prisma migrate dev --name init
    ```
 3. Run script
-  * Build
+* Build
     ```sh
     npm run build
     ```
-  * Start
+* Start
     ```sh
     npm start
     ```
-  * Dev
+* Dev
     ```sh
     npm run dev
     ```
+    
