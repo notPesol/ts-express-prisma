@@ -1,15 +1,3 @@
-### Built With
-
-* [TypeScript][TypeScript-url]
-* [Express.js][Express-url]
-* [![Prisma][Prisma.io]][Prisma-url]
-
-[TypeScript-url]: https://www.typescriptlang.org/
-[Express-url]: https://expressjs.com/
-[Express-url]: https://expressjs.com/
-[Prisma.io]: https://prismalens.vercel.app/header/logo-white.svg
-[Prisma-url]: https://www.prisma.io/
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -52,3 +40,13 @@
     npm run dev
     ```
     
+### Built With
+* [TypeScript][TypeScript-url]
+* [Express.js][Express-url]
+* [![Prisma][Prisma.io]][Prisma-url]
+
+[TypeScript-url]: https://www.typescriptlang.org/
+[Express-url]: https://expressjs.com/
+[Express-url]: https://expressjs.com/
+[Prisma.io]: https://prismalens.vercel.app/header/logo-white.svg
+[Prisma-url]: https://www.prisma.io/
